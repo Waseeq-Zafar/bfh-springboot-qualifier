@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:bfh;DB_CLOSE_DELAY=-1;MODE=MYSQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: none       # rely on schema.sql
+    show-sql: true
+
+  sql:
+    init:
+      mode: always         # run schema.sql + data.sql
+      continue-on-error: true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+app:
+  name: "Waseeq"
+  regNo: "22BCE1132"
+  email: "waseeqzafar04@gmail.com"
+  baseUrl: "https://bfhldevapigw.healthrx.co.in"
+  generatePath: "/hiring/generateWebhook/JAVA"
+  defaultAuthPrefix: ""
